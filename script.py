@@ -315,7 +315,7 @@ def kruskals():
     if not is_connected(adjacency_graph):
         return None
 
-    weights = {k: v for k, v in sorted(edge_weights.items(), key=lambda item: item[1])}
+    weights = {k: v for k, v in sorted(edge_weights.items(), key=lambda item: int(item[1]))}
     print(weights)
     subgraph = []
     adj_graph = {v: [] for v in vertices}
@@ -502,3 +502,4 @@ root.mainloop()
 # TODO
 # edge vertex list
 # zoom
+# more colours
